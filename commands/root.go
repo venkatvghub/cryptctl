@@ -11,11 +11,14 @@ import (
 )
 
 var (
-	Namespace   string
-	Provider    string
-	Filename    string
-	Version     string
-	versionFlag bool
+	Namespace     string
+	Provider      string
+	Filename      string
+	Version       string
+	versionFlag   bool
+	KmsKeyAlias   string
+	DynamoDbTable string
+	Debug         bool
 )
 
 const (

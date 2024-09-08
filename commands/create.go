@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
+	secretsv1alpha1 "github.com/opensecrecy/encrypted-secrets/api/v1alpha1"
 	"github.com/spf13/cobra"
 	"sigs.k8s.io/yaml"
 
-	secretsv1alpha1 "github.com/opensecrecy/encrypted-secrets/api/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -35,6 +35,7 @@ var createCmd = &cobra.Command{
 				APIVersion: SecretApiVersion,
 				Kind:       "EncryptedSecret",
 			},
+			Data: map[string]string{},
 		}
 
 		// set some sample labels
